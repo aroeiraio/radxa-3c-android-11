@@ -1,0 +1,20 @@
+# USB permissions initialization script
+# Configures automatic USB device permissions for Rock 3C
+
+# Configure USB permissions early in boot process
+on early-boot
+    # Set USB device node permissions
+    chmod 666 /dev/bus/usb/*/*
+    chown system system /dev/bus/usb/*/*
+
+# Apply USB permissions after system services are ready
+on property:sys.boot_completed=1
+    # Start USB permissions configuration
+    start usb_permissions_config
+
+# Service to configure USB permissions
+service usb_permissions_config /system/bin/usb_permissions.sh
+    class late_start
+    user root
+    group root
+    oneshot

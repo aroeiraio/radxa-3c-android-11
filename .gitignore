@@ -1,0 +1,22 @@
+# Build outputs
+*.o
+*.a
+*.so
+*.apk
+*.img
+
+# Editor files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*-backup

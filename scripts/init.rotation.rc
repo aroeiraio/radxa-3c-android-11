@@ -1,0 +1,23 @@
+# Rotation initialization for Rock 3C
+# This script ensures rotation is properly configured on boot
+
+# Restore rotation and start monitor after boot completes
+on property:sys.boot_completed=1
+    exec_start restore_rotation_once
+    start monitor_rotation_service
+
+# One-time rotation restore after boot
+service restore_rotation_once /system/bin/restore_rotation.sh
+    user root
+    group root
+    oneshot
+    seclabel u:r:su:s0
+    disabled
+
+# Background service to monitor and auto-save Settings UI rotation changes
+# Waits 70 seconds to avoid saving system resets during boot
+service monitor_rotation_service /system/bin/monitor_rotation.sh
+    user root
+    group root
+    seclabel u:r:su:s0
+    disabled

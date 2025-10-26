@@ -1,0 +1,11 @@
+# HDMI force service to switch displays
+# This ensures HDMI becomes the primary output
+
+service hdmi_switch /system/bin/sh /system/bin/hdmi_switch.sh
+    class late_start
+    user root
+    group root
+    oneshot
+
+on property:sys.boot_completed=1
+    start hdmi_switch
