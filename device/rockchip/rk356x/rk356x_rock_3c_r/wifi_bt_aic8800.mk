@@ -35,6 +35,8 @@ WIFI_DRIVER_FW_PATH_AP := ""
 # Bluetooth configuration
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_AIC := true
+BOARD_HAVE_BLUETOOTH_BCM := false
+BOARD_HAVE_BLUETOOTH_RTK := false
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/rockchip/rk356x/bluetooth
 
 # Include AIC Bluetooth vendor library
