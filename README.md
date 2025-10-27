@@ -45,6 +45,17 @@ The test machine used an Intel Core i5 12th gen (12 cores) with 48GB RAM + 20GB 
 ✅  WIFI works flawlessly, but automatic connection to saved SSIDs is disabled when Ethernet is connected   
 ✅  Bluetooth works flawlessly
 
+## Kernel Voltage domains
+
+The build process may issue warnings about voltage domain changes. To prevent build failures, use the following voltage configurations:
+- *1800000* PMUIO2 Supply Power Voltage(uv)
+- 3300000 VCCIO1 Supply Power Voltage(uv)
+- 3300000 VCCIO3 Supply Power Voltage(uv)
+- *1800000* VCCIO4 Supply Power Voltage(uv)
+- 3300000 VCCIO5 Supply Power Voltage(uv)
+- 3300000 VCCIO6 Supply Power Voltage(uv)
+- 3300000 VCCIO7 Supply Power Voltage(uv)
+
 ## Documentation
 
 There are some documentation created by claude describing all details of what was modified in the AOSP provided by Radxa.
