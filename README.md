@@ -61,7 +61,7 @@ The build process may issue warnings about voltage domain changes. To prevent bu
 There is some documentation edited and, to a great extent, created by Claude describing all details of what was modified in the AOSP provided by Radxa.
 Some modifications were more complex and extensive than initially expected.
 
-Comprehensive documentation is available in the [`/doc`](./doc/) directory, covering all implementation details, technical specifications, and configuration options:
+This documentation is available in the [`/doc`](./doc/) directory, covering all implementation details, technical specifications, and configuration options:
 
 ### Core Features
 - **[Touchscreen Rotation Overview](./doc/TOUCHESCREEN_OVERVIEW.md)** - Complete guide to manual display rotation implementation
