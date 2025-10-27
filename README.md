@@ -8,9 +8,7 @@ The project focuses on three main areas:
 - **Wi-Fi Support**: Full AIC8800D80 Wi-Fi implementation with modern security protocols
 - **Bluetooth Support**: Complete AIC8800 Bluetooth 4.2/5.0 BLE integration
 
-## Project Objective
-
-This implementation provides a complete Android 11 solution for the Radxa Rock 3C, transforming it from a basic Android device into a fully functional development board with enterprise-grade connectivity features. The project emphasizes clean, maintainable code using Android's overlay mechanism rather than framework modifications, ensuring compatibility with future Android updates.
+## Device and Manifest information
 
 **Target Hardware**: Radxa Rock 3C (Board version 1.4) with Rockchip RK356x SoC  
 **Android Version**: Android 11 (API Level 30)  
