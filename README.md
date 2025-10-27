@@ -41,8 +41,8 @@ The test machine used an Intel Core i5 12th gen (12 cores) with 48GB RAM + 20GB 
 
 ## Tests
 
-✅  Rotation is configurable through Android Settings and persists across reboots
-✅  WIFI works flawlessly, but automatic connection to saved SSIDs is disabled when Ethernet is connected
+✅  Rotation is configurable through Android Settings and persists across reboots   
+✅  WIFI works flawlessly, but automatic connection to saved SSIDs is disabled when Ethernet is connected   
 ✅  Bluetooth works flawlessly
 
 ## Documentation
