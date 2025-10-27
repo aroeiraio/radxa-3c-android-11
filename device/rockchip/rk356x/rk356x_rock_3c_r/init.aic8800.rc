@@ -1,0 +1,26 @@
+# AIC8800 WiFi initialization
+#
+# The aic8800 driver uses standard nl80211, but the Rockchip WiFi HAL
+# is hardcoded for Broadcom chips and fails to initialize.
+# As a workaround, we bring up the wlan0 interface manually.
+#
+
+on early-init
+    # Load AIC8800 kernel modules early in boot
+    insmod /vendor/lib/modules/aic8800_bsp.ko
+    insmod /vendor/lib/modules/aic8800_fdrv.ko
+    insmod /vendor/lib/modules/aic8800_btlpm.ko
+
+on boot
+    # Wait for wlan0 interface to be created by the driver
+    wait /sys/class/net/wlan0 5
+
+    # Bring up the wlan0 interface
+    exec_background - wifi - -- /system/bin/ip link set wlan0 up
+
+    # Set WiFi interface property
+    setprop wifi.interface wlan0
+
+on property:sys.boot_completed=1
+    # Ensure wlan0 is up after boot completes
+    exec_background - wifi - -- /system/bin/ip link set wlan0 up
